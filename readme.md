@@ -31,7 +31,7 @@ This should work on both Linux, Mac, and Windows. However, If you are running on
  git clone https://github.com/Chris-Kramer/cv101_assignment_3.git  
  ```
 **step 2: Navigate to folder**
-- Navigate to the folder "assignment-3".
+- Navigate to the folder "cv101_assignment_3".
 ```console
 cd cv101_assignment_3
 ```  
@@ -80,7 +80,7 @@ This script takes 11 parameters. It has already been supplied with default value
 Example:  
 _With bash script_
 ```console
-bash run-script_assignment-3-cmk.py.sh --image test.jpg --x_pixels_left 500 --x_pixels_right 500 --y_pixels_up 500 --y_pixels_down 500 --blur_kernel 3 --lower_thresh 150 --upper_thresh 200 --roi_output test_roi.jpg --cropped_output test_crop.jpg --contour_output contour_test.jpg
+bash run-script_assignment-3-cmk.sh --image test.jpg --x_pixels_left 500 --x_pixels_right 500 --y_pixels_up 500 --y_pixels_down 500 --blur_kernel 3 --lower_thresh 150 --upper_thresh 200 --roi_output test_roi.jpg --cropped_output test_crop.jpg --contour_output contour_test.jpg
 ```  
 _Without bash script_
 ```console
