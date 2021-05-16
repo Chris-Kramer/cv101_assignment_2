@@ -13,7 +13,6 @@ if [[ -f "/$VENVNAME/bin" ]]
 
     then
         source $VENVNAME/bin/activate
-        echo "building for linux"
     
     else
         source $VENVNAME/Scripts/activate
