@@ -74,7 +74,7 @@ This script takes 11 parameters. It has already been supplied with default value
     - Default = image_with_ROI.jpg  
 - `cropped_output` The filename for cropped output image. It will be located in the folder "output".  
     - Default = image_cropped.jpg  
-- `contour_output` The filename for th output image with contour lines. It will be located in the folder "output".  
+- `contour_output` The filename for the output image with contour lines. It will be located in the folder "output".  
     - Default = image_letters.jpg
 
 Example:  
