@@ -23,18 +23,19 @@ The script uses basic image manipulation to find a region of interest (ROI) and 
 
 ## Usage  
 This should work on both Linux, Mac, and Windows. However, If you are running on a local windows machine, you should run it from a bash emulator such as git bash.  
-**Step 1: Clone repo**
+**Step 1 - Clone repo:**
 - open terminal
 - Navigate to destination for repo
 - type the following command
  ```console
  git clone https://github.com/Chris-Kramer/cv101_assignment_3.git  
  ```
-**step 2: Navigate to folder**
+**Step 2 - Navigate to folder:**
 - Navigate to the folder "cv101_assignment_3".
 ```console
 cd cv101_assignment_3
 ```  
+**Step 3 - Run bash script**  
 - Use the bash script _run-script.sh_ to set up environment and run the script:  
 ```console
 bash run-script_assignment-3-cmk.sh
