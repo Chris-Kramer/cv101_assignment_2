@@ -1,7 +1,6 @@
 # Assignment 3 - Edge detection
 **Christoffer Kramer**  
-**05-03-2021**  
-
+**05-03-2021**   
 
 The purpose of this assignment is to use computer vision to extract specific features from images. In particular, we're going to see if we can find text. We are not interested in finding whole words right now; we'll look at how to find whole words in a coming class. For now, we only want to find language-like objects, such as letters and punctuation.  
 Download and save the image at the link below:  
@@ -43,7 +42,7 @@ bash run-script_assignment-3-cmk.sh
 The script will print out `DONE! THE CROPPED PICTURES AND THE PICTURE OF CONTOUR LINES ARE LOCATED IN THE FOLDER'output'` when it is done running. 
 
 ### Running on windows without a bash emulator
-If you're running on a local windows machine, and don't have a bash emulator, you have to set up a virtual environment, activate it, install dependencies (requirements.txt), and then run the script manually from the src folder.  
+If you're running on a local windows machine, and don't have a bash emulator, you have to set up a virtual environment, activate it, install dependencies (requirements.txt), and then run the python script manually from the src folder.  
 
 ## Output
 The output is three images which can be found in the folder "output". The default names are the following: 
@@ -65,17 +64,17 @@ This script takes 11 parameters. It has already been supplied with default value
     - Default = 750  
 - `--y_pixels_down` How many pixels below the center should the region of interest include?  
     - Default = 1175  
-- `blur_kernel` The size of the blur kernel (Gaussian blur).  
+- `--blur_kernel` The size of the blur kernel (Gaussian blur).  
     - Default = 5 (5x5)  
-- `lower_thresh` The lower threshold for Gaussian blur.  
+- `--lower_thresh` The lower threshold for Gaussian blur.  
     - Default = 100  
-- `upper_thresh` The upper threshhold for Gaussian blur.  
+- `--upper_thresh` The upper threshhold for Gaussian blur.  
     - Default = 150
-- `roi_output` The filename for the outout image with ROI, the image will be located in the folder "output".  
+- `--roi_output` The filename for the outout image with ROI, the image will be located in the folder "output".  
     - Default = image_with_ROI.jpg  
-- `cropped_output` The filename for cropped output image. It will be located in the folder "output".  
+- `--cropped_output` The filename for cropped output image. It will be located in the folder "output".  
     - Default = image_cropped.jpg  
-- `contour_output` The filename for the output image with contour lines. It will be located in the folder "output".  
+- `--contour_output` The filename for the output image with contour lines. It will be located in the folder "output".  
     - Default = image_letters.jpg
 
 Example:  
@@ -87,8 +86,3 @@ _Without bash script_
 ```console
 python assignment-3-cmk.py --image test.jpg --x_pixels_left 500 --x_pixels_right 500 --y_pixels_up 500 --y_pixels_down 500 --blur_kernel 3 --lower_thresh 150 --upper_thresh 200 --roi_output test_roi.jpg --cropped_output test_crop.jpg --contour_output contour_test.jpg
 ```  
-
-## Discussion  
-The script performs relatively well on specific images. However, it lacks generalizability. The first problem is thresholding since different images might require different thresholds. This problem is relatively straightforward to solve with adaptive thresholding (due to time constraints I haven’t done this). 
-The biggest problem is the region of interest, which has to be specified manually which, for obvious reasons, makes the script less generalizable. Solving this problem would require OCR (optical character recognition) methods, which would likewise be hard to generalize with images from different domains (e.g. memes, memorials paper scans).
-
